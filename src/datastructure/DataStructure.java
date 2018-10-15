@@ -20,6 +20,13 @@ public class DataStructure {
         }
     }
     
+    public void print(DataStructureIterator iterator){
+        while (iterator.hasNext()){
+            System.out.print(iterator.next() + " ");
+        }
+        System.out.println();
+    }
+    
     public void printEven(){
         DataStructureIterator iterator = this.new EvenIterator();
         while (iterator.hasNext()){
@@ -48,7 +55,8 @@ public class DataStructure {
     public static void main(String[] args) {
         
         DataStructure ds = new DataStructure();
-        ds.printEven();
+        DataStructureIterator iterator = ds.new EvenIterator();
+        ds.print(iterator);
     }
     
 }
